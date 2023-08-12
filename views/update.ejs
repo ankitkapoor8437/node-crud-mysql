@@ -12,18 +12,23 @@
 
 <body>
     <div class="container">
-        <h3>Create Operation</h3>
-        <form action="http://localhost:3000/create" method="post">
+        <h3>Update Operation</h3>
+        <form action="http://localhost:3000/final-update" method="post">
             <div class="mb-3">
-                <label for="exampleInputEmail1"  class="form-label">Name</label>
-                <input name="name" class="form-control">
+                <input type="hidden" name="id" value="<%= result.id%>">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input name="name" class="form-control" value="<%= result.name%>">
             </div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input name="email" class="form-control" >
+                <input name="email" class="form-control" value="<%= result.email%>">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button  type="submit" class="btn btn-danger"> <a href="/data" style="text-decoration: none; color: white;">View other Data</a></button>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-danger">
+                <a style="text-decoration: none; color: white;" href="/data">Back
+                </a>
+            </button>
+
         </form>
     </div>
 </body>
